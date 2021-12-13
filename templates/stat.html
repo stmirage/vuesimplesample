@@ -1,0 +1,36 @@
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/spectre.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/spectre-exp.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/spectre-icons.min.css">
+    <title>client</title>
+  </head>
+<body>
+
+<div class="container">
+  		<div class="columns">
+    		<div class="column col-12">
+				<table class="table">
+  		<thead>
+    		<tr>
+      		<th>name</th>
+      		<th>genre</th>
+      		<th>release date</th>
+    		</tr>
+  		</thead>
+  		<tbody>
+        {% for item in table_data %}
+    		<tr class="active">
+      				<td>{{item.title}}</td>
+      				<td>{{item.author}}</td>
+      				<td>14 October 1994</td>
+    		</tr>
+        {% endfor %}
+  		</tbody>
+		</table>
+		<button class="btn btn-primary" onClick="window.location.reload(true)"><i class="icon icon-refresh"></i></button>
+    </div>
+  </div>
+</div>
+
+</body>
